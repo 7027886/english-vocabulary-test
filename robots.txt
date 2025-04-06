@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://7027886.github.io/english-vocabulary-test/sitemap.xml 
