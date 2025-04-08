@@ -159,34 +159,34 @@ function loadWords() {
                         meaning = item.chinese.trim();
                     }
                     
-                    // 判断难度级别
+            // 判断难度级别
                     let difficulty = 'basic';
-                    if (word.includes('**')) {
-                        difficulty = 'advanced';
-                    } else if (word.includes('*')) {
-                        difficulty = 'intermediate';
-                    }
+            if (word.includes('**')) {
+                difficulty = 'advanced';
+            } else if (word.includes('*')) {
+                difficulty = 'intermediate';
+            }
                     
-                    return {
+            return {
                         word: word.replace(/\*+/g, ''),
                         meaning: meaning,
                         phonetic: phonetic.trim(),
-                        difficulty
-                    };
+                difficulty
+            };
                 }).filter(item => item !== null);
                 
                 if (words.length === 0) {
                     throw new Error('处理后的词汇表为空');
                 }
                 
-                console.log('词汇表加载成功，共', words.length, '个单词');
+        console.log('词汇表加载成功，共', words.length, '个单词');
                 // 检查并报告缺少音标的单词数量
                 const wordsWithoutPhonetic = words.filter(w => !w.phonetic).length;
                 if (wordsWithoutPhonetic > 0) {
                     console.warn(`警告：有 ${wordsWithoutPhonetic} 个单词缺少音标`);
                 }
                 
-                showHomePage();
+        showHomePage();
             } catch (error) {
                 console.error('处理词汇表数据失败:', error);
                 showError('处理词汇表数据失败: ' + error.message);
@@ -506,18 +506,18 @@ function showLeaderboard() {
             <div class="leaderboard-section">
                 <h3>${name}</h3>
                 ${leaderboardData[difficulty].length > 0 ? `
-                    <div class="leaderboard-list">
+            <div class="leaderboard-list">
                         ${leaderboardData[difficulty].map((entry, index) => `
-                            <div class="leaderboard-item">
+                    <div class="leaderboard-item">
                                 <span class="rank">#${index + 1}</span>
                                 <span class="score">${entry.score.toFixed(1)}%</span>
                                 <span class="date">${entry.date}</span>
-                            </div>
+                        </div>
                         `).join('')}
                     </div>
                 ` : '<p>暂无记录</p>'}
-            </div>
-        `;
+        </div>
+    `;
     }
     
     leaderboardHTML += `
@@ -548,9 +548,9 @@ function showWrongAnswers() {
                     <div class="wrong-answer-item">
                         <div class="word-info">
                             <span class="word">${item.word}</span>
-                            <button onclick="playWord('${item.word}')" class="btn play-btn" title="播放发音">
-                                <span>🔊</span>
-                            </button>
+                                <button onclick="playWord('${item.word}')" class="btn play-btn" title="播放发音">
+                                    <span>🔊</span>
+                                </button>
                             ${item.phonetic ? `<span class="phonetic">${item.phonetic}</span>` : ''}
                         </div>
                         <div class="meaning">${item.meaning}</div>

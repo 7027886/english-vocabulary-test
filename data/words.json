@@ -1,8 +1,8 @@
 [
   {
-    "english": "a",
+    "english": "a,an",
     "phonetic": "/ə, eɪ(ən)/",
-    "chinese": "an art. 一（个、件……）"
+    "chinese": "art. 一（个、件……）"
   },
   {
     "english": "abandon*",
@@ -965,14 +965,14 @@
     "chinese": " pron. 任何人，无论谁"
   },
   {
-    "english": "anything*",
+    "english": "anything",
     "phonetic": "/ˈenɪθɪŋ/",
     "chinese": " pron. 什么事（物）；任何事（物）"
   },
   {
-    "english": "anywa",
+    "english": "anyway",
     "phonetic": "/ˈenɪweɪ/",
-    "chinese": " y ad. 不管怎样"
+    "chinese": " ad. 不管怎样"
   },
   {
     "english": "anywhere*",
@@ -1997,7 +1997,7 @@
   {
     "english": "belgium*",
     "phonetic": "/ˈbeldʒəm/",
-    "chinese": " * n. 比利时"
+    "chinese": "n. 比利时"
   },
   {
     "english": "belief",
